@@ -8,7 +8,7 @@ module.exports = () => {
     entry: {
       main: "./src/js/index.js",
       install: "./src/js/install.js",
-      cards: "./src/js/cards.js",
+      database: "./src/js/database.js",
     },
 
     output: {
@@ -29,7 +29,8 @@ module.exports = () => {
       new WebpackPwaManifest({
         name: "Jate - Text Editor",
         short_name: "Jate",
-        description: "Progressive Web Application Developed for UNH Coding Bootcamp 2022",
+        description:
+          "Progressive Web Application Developed for UNH Coding Bootcamp 2022",
         background_color: "#ffffff",
         crossorigin: "use-credentials", //can be null, use-credentials or anonymous
         start_url: "/",
@@ -43,6 +44,7 @@ module.exports = () => {
         ],
       }),
     ],
+    devtool: "source-map",
 
     module: {
       rules: [
